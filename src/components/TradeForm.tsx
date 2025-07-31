@@ -51,7 +51,7 @@ export default function TradeForm() {
     }
   }, [isInitialized])
 
-  const handleInputChange = (field: keyof TradeFormData, value: any) => {
+  const handleInputChange = (field: keyof TradeFormData, value: string | number | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
@@ -315,7 +315,7 @@ export default function TradeForm() {
                     <input
                       type="datetime-local"
                       value={formData.closeTime || ''}
-                      onChange={(e) => handleInputChange('closeTime', e.target.value || null)}
+                      onChange={(e) => handleInputChange('closeTime', e.target.value || '')}
                       className="w-full px-4 py-3 border border-dark-border rounded-xl bg-dark-input text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
                     />
                   </div>

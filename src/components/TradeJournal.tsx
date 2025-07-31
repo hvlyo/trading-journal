@@ -124,7 +124,7 @@ export default function TradeJournal({ trades, onExport }: TradeJournalProps) {
       return []
     }
 
-    let filtered = safeTrades.filter(trade => {
+    const filtered = safeTrades.filter(trade => {
       // Safety check for trade object
       if (!trade || typeof trade !== 'object') {
         return false

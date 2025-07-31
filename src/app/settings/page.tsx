@@ -130,7 +130,7 @@ export default function SettingsPage() {
     await signOut()
   }
 
-  const handleSettingChange = (field: string, value: any) => {
+  const handleSettingChange = (field: string, value: string | number | boolean) => {
     setSettings(prev => ({
       ...prev,
       [field]: value
