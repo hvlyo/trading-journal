@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f0f23;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Ensure dark mode is always applied */
+html.dark {
+  color-scheme: dark;
+}
+
+/* Override any light theme styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom range slider styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #374151;
+}
+
+input[type="range"]::-webkit-slider-track {
+  background: #374151;
+  height: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #6366f1;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  margin-top: -6px;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #4f46e5;
+  transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-track {
+  background: #374151;
+  height: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: #6366f1;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: #4f46e5;
+  transform: scale(1.1);
+}
+
+/* Fallback for browsers that don't support custom styling */
+input[type="range"]:not([style*="display: none"]) {
+  background: #374151;
+  height: 8px;
+  border-radius: 4px;
+}
+
+/* Global button hover animations */
+button {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure disabled buttons don't have hover effects */
+button:disabled {
+  transform: scale(1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Special handling for buttons that already have custom hover effects */
+button.hover-exclude {
+  transform: scale(1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+button.hover-exclude:hover {
+  transform: scale(1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Select dropdown styling for dark mode */
+select {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+  border-color: #374151 !important;
+}
+
+select option {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+  padding: 8px 12px !important;
+}
+
+select option:hover {
+  background-color: #374151 !important;
+}
+
+select option:checked {
+  background-color: #6366f1 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure select dropdowns are properly styled in all browsers */
+select:focus {
+  outline: none !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+}
