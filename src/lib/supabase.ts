@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
 // Get environment variables
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://leurhwzhedghjkyhpwxk.supabase.co'
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxldXJod3poZWRnaGpreWhwd3hrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM5NjI5NTAsImV4cCI6MjA2OTUzODk1MH0.wknGQYDaoWjxCWkaiZ0ernjL7tKK3_eBC_29nOI_-UM'
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 // Debug logging (only in browser)
 if (typeof window !== 'undefined') {

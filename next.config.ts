@@ -11,6 +11,14 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [];
+  },
+  // Optimize for static export if needed
+  output: 'standalone',
+  // Ensure proper asset handling
+  assetPrefix: process.env.NODE_ENV === 'production' ? undefined : undefined,
+  // Enable experimental features for better performance
+  experimental: {
+    optimizePackageImports: ['@supabase/supabase-js'],
   }
 };
 

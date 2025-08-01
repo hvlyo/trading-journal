@@ -1,0 +1,12 @@
+# SPA routing - redirect all routes to index.html
+/*    /index.html   200
+
+# Specific route redirects for better performance
+/auth    /index.html   200
+/dashboard    /index.html   200
+/settings    /index.html   200
+/trading    /index.html   200
+/journal    /index.html   200
+/analytics    /index.html   200
+/new-trade    /index.html   200
+/test-env    /index.html   200 

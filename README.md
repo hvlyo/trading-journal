@@ -126,7 +126,23 @@ If you see "Environment variables not configured" errors:
 
 ## Deployment
 
-### Vercel (Recommended)
+### Netlify (Recommended for this project)
+
+1. **Push your code to GitHub**
+2. **Connect your repository to Netlify**:
+   - Go to [netlify.com](https://netlify.com) and sign up/login
+   - Click "New site from Git"
+   - Connect your GitHub account and select this repository
+3. **Configure build settings**:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+4. **Add environment variables** in Netlify dashboard:
+   - Go to Site settings > Environment variables
+   - Add `NEXT_PUBLIC_SUPABASE_URL` with your Supabase project URL
+   - Add `NEXT_PUBLIC_SUPABASE_ANON_KEY` with your Supabase anon key
+5. **Deploy**: Netlify will automatically deploy your site
+
+### Vercel (Alternative)
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
@@ -136,7 +152,6 @@ If you see "Environment variables not configured" errors:
 ### Other Platforms
 
 The app can be deployed to any platform that supports Next.js:
-- Netlify
 - Railway
 - DigitalOcean App Platform
 - AWS Amplify
